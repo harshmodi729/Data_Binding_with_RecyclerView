@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Data Binding with RecyclerView</string>
+    <string name="news_api_key">YOUR_API_KEY</string>
+</resources>
