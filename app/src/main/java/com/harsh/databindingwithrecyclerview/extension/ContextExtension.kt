@@ -5,9 +5,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
 
 fun Context.makeToast(message: String, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, message, length).show()
@@ -39,26 +36,4 @@ fun Context.isInternetAvailable(): Boolean {
         }
     }
     return isConnected
-}
-
-/**
- * If @BindingAdapter annotation method is create in top level like in extension or in object then
- * @JvmStatic annotation is not required.
- */
-@BindingAdapter("newsImage")
-fun AppCompatImageView.getNewsImage(url: String) {
-    Glide.with(context)
-        .load(url)
-        .skipMemoryCache(false)
-        .centerCrop()
-        .into(this)
-}
-
-@BindingAdapter("fullImage")
-fun AppCompatImageView.getNewsFullImage(url: String) {
-    Glide.with(context)
-        .load(url)
-        .skipMemoryCache(false)
-        .fitCenter()
-        .into(this)
 }

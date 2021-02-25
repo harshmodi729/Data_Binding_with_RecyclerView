@@ -69,10 +69,13 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
     //endregion
 
+    //region Coil(COroutines Image Loader)
+    implementation 'io.coil-kt:coil:1.1.1'
+    //endregion
+
     /**
      * dataBinding buildFeatures 'true' will give advice to use kotlin-kapt.
      * Without adding dataBinding compiler annotation library application can not able to run.
-     * kotlin-kapt requires this annotation library.
      */
     kapt 'com.android.databinding:compiler:3.1.4'
     testImplementation 'junit:junit:4.+'
